@@ -1,27 +1,21 @@
 <?php
 
 use Joneiros\Challenge;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 //use PHPUnit\Framework\Attributes\DataProvider;
 
-class SumSolverTest extends TestCase{
+class ChallengeTest extends TestCase{
 
-    public function testTwoSumBruteForceNoSolution(){
-        $main = new Challenge();
-        $this->assertTrue(false);
-    }
 
-    /*
-    #[DataProvider("getCasesTestTwoSum")]
-    public function testTwoSumBruteForce(string $case, array $nums, $target, int $answerIndex1, int $answerIndex2){
-        $solver = new SumSolver();
-        $answerIndexes = $solver->twoSumBruteForce($nums, $target);
-        $this->assertContains($answerIndex1, $answerIndexes, $case);
-        $this->assertContains($answerIndex2, $answerIndexes, $case);
+    #[DataProvider("getCases")]
+    public function testMainFunc(string $case, array $nums, $target){
+        $solver = new Challenge();
+        $this->assertEquals($target, $solver->main(), $case);
     }
 
 
-    public static function getCasesTestAspectOfMain(): array {
+    public static function getCases(): array {
         return [
             [
                 'case' => 'simplest',
@@ -29,11 +23,16 @@ class SumSolverTest extends TestCase{
                     1,
                     2,
                 ],
-                'target' => 3,
-                'answerIndex1' => 0,
-                'answerIndex2' => 1,
+                'target' => true,
+            ],
+            [
+                'case' => 'Other Case',
+                'nums' => [
+                    1,
+                    2,
+                ],
+                'target' => false,
             ],
         ];
     }
-    */
 }
