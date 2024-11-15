@@ -1,1 +1,5 @@
 **/vendor/
+
+#Usually I would include composer.lock files, but in most cases in this repo, locking adds no benefit.
+#If a lock file needs to be referenced, it can be done from the early commits.
+**/composer.lock

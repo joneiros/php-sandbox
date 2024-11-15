@@ -9,29 +9,24 @@ class ChallengeTest extends TestCase{
 
 
     #[DataProvider("getCases")]
-    public function testMainFunc(string $case, array $nums, $target){
+    public function testMainFunc(string $case, array $nums, $expected){
         $solver = new Challenge();
-        $this->assertEquals($target, $solver->main(), $case);
+        $actual = $solver->main();
+        $this->assertEquals($expected, $actual, $case);
     }
 
 
     public static function getCases(): array {
         return [
             [
-                'case' => 'simplest',
-                'nums' => [
-                    1,
-                    2,
-                ],
-                'target' => true,
+                'case' => 'A',
+                'nums' => [],
+                'expected' => true,
             ],
             [
-                'case' => 'Other Case',
-                'nums' => [
-                    1,
-                    2,
-                ],
-                'target' => false,
+                'case' => 'B',
+                'nums' => [],
+                'expected' => false,
             ],
         ];
     }
