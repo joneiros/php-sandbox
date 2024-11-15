@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use Jonoros\SumSolver;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class SumSolverTest extends TestCase{
 
@@ -13,7 +14,7 @@ class SumSolverTest extends TestCase{
         $this->assertEmpty($answerIndexes);
     }
 
-    /** @dataProvider getCasesTestTwoSum */
+    #[DataProvider("getCasesTestTwoSum")]
     public function testTwoSumBruteForce(string $case, array $nums, $target, int $answerIndex1, int $answerIndex2){
         $solver = new SumSolver();
         $answerIndexes = $solver->twoSumBruteForce($nums, $target);
