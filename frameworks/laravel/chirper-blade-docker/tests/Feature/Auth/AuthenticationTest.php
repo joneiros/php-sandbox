@@ -51,4 +51,10 @@ class AuthenticationTest extends TestCase
         $this->assertGuest();
         $response->assertRedirect('/');
     }
+
+    public function testNavigation_WhenUserTriesToAccessDashboardBeforeLogin(): void {
+        $response = $this->get('/dashboard');
+
+        $response->assertStatus(302);
+    }
 }

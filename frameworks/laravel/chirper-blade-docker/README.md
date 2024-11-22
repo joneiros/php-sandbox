@@ -7,6 +7,20 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Jon Notes
+
+- This project runs on Docker through Sail. Run container with `./vendor/bin/sail up` or `phpsail up`
+- Once container is running, run `phpsail npm run dev` to start app.
+- Run tests in container with `phpsail exec laravel.test ./vendor/bin/phpunit tests`
+- Tail logs with `phpsail artisan pail`
+- Database connection can be set up using `.env` details. Note that the port is changed in the `docker-compose.yml` to `3307`
+- A PHP REPL (read-eval-print-loop) shell is available with `phpsail artisan tinker`.
+Trigger manual jobs, experiment, or run data requests like `App\Models\Chirp::all();`
+- The mail server is supposedly available on two ports, but only `http://localhost:8025/` actually works.
+
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
