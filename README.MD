@@ -6,7 +6,7 @@ their usage of PHP versions or supporting structures.
 
 ## First Time Back to PHP in a while?
 To shake some of the rust off, find a challenge folder
-(such as challenge-sites/leetcode/steps-to-zero) set up, and run the tests:
+(such as challenges/leetcode/steps-to-zero) set up, and run the tests:
 
 1. Build the `vendor` folder (dependencies):
 ```
