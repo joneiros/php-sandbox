@@ -15,6 +15,17 @@ class Challenge {
      * 3. Else, set m to n, n to r, and try again.
      */
     public function main(int $m, int $n): int {
+        /**
+         * This step is not strictly necessary, because
+         * in modulus a % b if a is smaller than b, the remainder is a
+         * and the rest of our algorithm will switch them.
+         *
+         * I originally added this not knowing the above rule (and not having
+         * searched for it), then deleted it as superfluous after learning about
+         * the rule, and now am re-adding it after P.4 mentions it.
+         *
+         * This is a tiny optimization since after the first cycle m > n consistently.
+         */
         if($m < $n) {
             $tmp = $m;
             $m = $n;

@@ -19,6 +19,12 @@ class ChallengeTest extends TestCase{
     public static function getCases(): array {
         return [
             [
+                'case' => 'Knuth P.4',
+                'm' => 119,
+                'n' => 544,
+                'expected' => 17,
+            ],
+            [
                 'case' => 'A',
                 'm' => 1,
                 'n' => 1,
