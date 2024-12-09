@@ -3,7 +3,6 @@
 use Joneiros\Challenge;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-//use PHPUnit\Framework\Attributes\DataProvider;
 
 class ChallengeTest extends TestCase{
 
@@ -23,6 +22,12 @@ class ChallengeTest extends TestCase{
                 'm' => 119,
                 'n' => 544,
                 'expected' => 17,
+            ],
+            [
+                'case' => 'Knuth P.9 Exercise 4',
+                'm' => 2166,
+                'n' => 6099,
+                'expected' => 57,
             ],
             [
                 'case' => 'A',
